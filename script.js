@@ -136,3 +136,38 @@ ageFilter?.addEventListener("change", applyActivityFilters);
 activityAreaFilter?.addEventListener("change", applyActivityFilters);
 filterReset?.addEventListener("click", resetActivityFilters);
 emptyReset?.addEventListener("click", resetActivityFilters);
+
+const resourceFilterButtons = [
+  ...document.querySelectorAll("[data-resource-filter]"),
+];
+const resourceItems = [...document.querySelectorAll(".resource-item")];
+const resourceCount = document.querySelector("#resource-count");
+
+resourceFilterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const selectedAudience = button.dataset.resourceFilter;
+    let visibleCount = 0;
+
+    resourceFilterButtons.forEach((item) => {
+      const isActive = item === button;
+      item.classList.toggle("active", isActive);
+      item.setAttribute("aria-pressed", String(isActive));
+    });
+
+    resourceItems.forEach((item) => {
+      const isVisible =
+        selectedAudience === "all" || item.dataset.audience === selectedAudience;
+      item.classList.toggle("filtered-out", !isVisible);
+      item.setAttribute("aria-hidden", String(!isVisible));
+      if (isVisible) visibleCount += 1;
+    });
+
+    if (resourceCount) {
+      resourceCount.innerHTML = `<strong>${visibleCount}개</strong>의 자료가 있어요`;
+    }
+  });
+});
+
+document.querySelector("#print-resources")?.addEventListener("click", () => {
+  window.print();
+});

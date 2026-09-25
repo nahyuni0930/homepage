@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="교사와 학부모를 위한 놀이 관찰, 환경 점검, 가정 연계 자료를 확인하세요." />
+    <meta name="theme-color" content="#fffdf8" />
+    <title>자료실 | 아이누리 배움터</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문 바로가기</a>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="index.html" aria-label="아이누리 배움터 홈">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 18.5V10m0 2.5c-2.8 0-5-1.9-5-4.7 2.8 0 5 1.9 5 4.7Zm0-2.2c2.8 0 5-1.8 5-4.8-2.8 0-5 1.9-5 4.8Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M7.5 18.5h9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+            </svg>
+          </span>
+          <span>아이누리 배움터</span>
+        </a>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="메뉴 열기">
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="site-navigation" class="site-nav" aria-label="주요 메뉴">
+          <a href="curriculum.html">교육과정</a>
+          <a href="activities.html">놀이 활동</a>
+          <a class="current" href="resources.html" aria-current="page">자료실</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="resource-page-hero">
+        <div class="shell resource-hero-grid">
+          <div>
+            <p class="breadcrumb"><a href="index.html">홈</a><span>/</span>자료실</p>
+            <p class="eyebrow"><span></span> 함께 살피고 기록해요</p>
+            <h1>교사와 부모를 위한<br /><strong>작은 실천 자료실</strong></h1>
+            <p>아이의 놀이를 이해하고 일상에서 지원하는 데 필요한 핵심 내용을 짧고 명확하게 정리했어요.</p>
+          </div>
+          <div class="resource-hero-note">
+            <span aria-hidden="true">✍️</span>
+            <strong>관찰은 평가가 아니라<br />아이를 이해하는 과정이에요.</strong>
+            <p>결과보다 아이가 무엇에 관심을 보이고 어떻게 시도하는지 살펴보세요.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="resource-library section-soft">
+        <div class="shell">
+          <div class="resource-toolbar">
+            <div>
+              <p class="eyebrow">대상별 자료 보기</p>
+              <h2>누구에게 필요한 자료인가요?</h2>
+            </div>
+            <div class="resource-filter" role="group" aria-label="자료 대상 선택">
+              <button class="active" type="button" data-resource-filter="all" aria-pressed="true">전체</button>
+              <button type="button" data-resource-filter="teacher" aria-pressed="false">교사용</button>
+              <button type="button" data-resource-filter="parent" aria-pressed="false">학부모용</button>
+            </div>
+          </div>
+
+          <p id="resource-count" class="resource-count" aria-live="polite"><strong>6개</strong>의 자료가 있어요</p>
+
+          <div class="resource-grid">
+            <article class="resource-item" data-audience="teacher">
+              <div class="resource-item-head"><span class="resource-type teacher">교사용</span><span aria-hidden="true">👀</span></div>
+              <h3>놀이 관찰 기록 포인트</h3>
+              <p>보이는 행동만 간결하게 기록하고 아이의 관심과 반복되는 시도를 찾아보세요.</p>
+              <details><summary>체크 포인트 열기</summary><ul><li>언제, 어디에서 놀이했나요?</li><li>무엇에 관심을 보였나요?</li><li>어떤 말과 행동을 반복했나요?</li><li>또래·교사·자료와 어떻게 관계 맺었나요?</li><li>다음 놀이를 위해 무엇을 지원할까요?</li></ul></details>
+            </article>
+
+            <article class="resource-item" data-audience="teacher">
+              <div class="resource-item-head"><span class="resource-type teacher">교사용</span><span aria-hidden="true">🏡</span></div>
+              <h3>놀이 환경 점검표</h3>
+              <p>아이 스스로 선택하고 충분히 몰입할 수 있는 공간인지 차근차근 확인해요.</p>
+              <details><summary>체크 포인트 열기</summary><ul><li>자료가 아이의 눈높이에 있나요?</li><li>혼자와 함께 놀이할 공간이 모두 있나요?</li><li>놀이 자료를 자유롭게 결합할 수 있나요?</li><li>움직임과 휴식 공간이 안전하게 구분되나요?</li><li>아이의 현재 관심이 환경에 반영되어 있나요?</li></ul></details>
+            </article>
+
+            <article class="resource-item" data-audience="teacher">
+              <div class="resource-item-head"><span class="resource-type teacher">교사용</span><span aria-hidden="true">💬</span></div>
+              <h3>생각을 여는 상호작용</h3>
+              <p>정답을 알려 주기 전에 아이의 시도와 생각을 더 들을 수 있는 말을 건네요.</p>
+              <details><summary>대화 예시 열기</summary><ul><li>“어떤 점이 재미있었어?”</li><li>“다른 방법으로도 해볼 수 있을까?”</li><li>“왜 그렇게 생각했는지 궁금해.”</li><li>“친구의 방법과 어떤 점이 다를까?”</li><li>“다음에는 무엇을 더 해보고 싶어?”</li></ul></details>
+            </article>
+
+            <article class="resource-item" data-audience="parent">
+              <div class="resource-item-head"><span class="resource-type parent">학부모용</span><span aria-hidden="true">⏰</span></div>
+              <h3>하루 10분 가정 놀이</h3>
+              <p>특별한 교구 없이 집에 있는 물건과 대화만으로도 충분히 즐겁게 놀 수 있어요.</p>
+              <details><summary>놀이 예시 열기</summary><ul><li>양말 짝을 찾아 분류해요.</li><li>숟가락으로 집 안의 소리를 찾아요.</li><li>창밖 날씨를 몸으로 표현해요.</li><li>가족사진을 보며 기억을 이야기해요.</li><li>종이 상자로 새로운 공간을 만들어요.</li></ul></details>
+            </article>
+
+            <article class="resource-item" data-audience="parent">
+              <div class="resource-item-head"><span class="resource-type parent">학부모용</span><span aria-hidden="true">🤍</span></div>
+              <h3>아이의 말을 기다리는 대화</h3>
+              <p>질문을 연달아 하기보다 아이의 시선과 말을 따라가며 충분히 기다려 주세요.</p>
+              <details><summary>대화 원칙 열기</summary><ul><li>아이가 보는 것을 함께 바라봐요.</li><li>짧고 편안한 말로 반응해요.</li><li>대답할 시간을 충분히 기다려요.</li><li>틀린 표현도 먼저 의미를 이해해요.</li><li>비교보다 아이의 고유한 시도를 말해요.</li></ul></details>
+            </article>
+
+            <article class="resource-item" data-audience="parent">
+              <div class="resource-item-head"><span class="resource-type parent">학부모용</span><span aria-hidden="true">🛡️</span></div>
+              <h3>안전한 놀이 준비</h3>
+              <p>재료의 크기와 상태, 놀이 공간을 먼저 확인하고 놀이 중에는 가까이에서 살펴요.</p>
+              <details><summary>안전 점검 열기</summary><ul><li>연령에 맞는 크기의 재료인가요?</li><li>모서리·파손·오염이 없나요?</li><li>미끄러지거나 부딪힐 곳은 없나요?</li><li>입에 넣을 가능성을 고려했나요?</li><li>놀이 후 재료를 안전하게 정리했나요?</li></ul></details>
+            </article>
+          </div>
+
+          <div class="print-guide">
+            <div><span aria-hidden="true">🖨️</span><div><strong>필요한 자료를 종이로 활용해 보세요</strong><p>필터로 대상을 고른 뒤 현재 페이지를 인쇄하면 선택한 자료만 출력됩니다.</p></div></div>
+            <button id="print-resources" class="button button-primary" type="button">현재 자료 인쇄하기</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="resource-source-section">
+        <div class="shell source-cards">
+          <div><p class="eyebrow">더 깊이 알아보기</p><h2>공식 자료도 함께 확인하세요</h2><p>교육과정 원문과 현장지원자료는 공식 기관의 최신 자료를 기준으로 확인하는 것이 좋습니다.</p></div>
+          <a href="https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=312&boardSeq=79419&lev=0&sear=" target="_blank" rel="noopener noreferrer"><span>교육부</span><strong>2019 개정 누리과정</strong><small>공식 자료 열기 ↗</small></a>
+          <a href="https://central.childcare.go.kr/ccef/community/data/DataSl.jsp?BBSGB=49&BID=103056&flag=Sl" target="_blank" rel="noopener noreferrer"><span>중앙육아종합지원센터</span><strong>2024 개정 표준보육과정</strong><small>공식 자료 열기 ↗</small></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <a class="brand" href="index.html" aria-label="아이누리 배움터 홈"><span class="brand-mark" aria-hidden="true">🌱</span><span>아이누리 배움터</span></a>
+        <div class="footer-meta"><div class="footer-links"><a href="about.html">사이트 소개</a><a href="resources.html">자료실</a></div><p>© <span id="current-year"></span> 아이누리 배움터 · 아이의 놀이와 배움을 함께 바라봅니다.</p></div>
+      </div>
+    </footer>
+  </body>
+</html>
