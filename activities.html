@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="연령과 교육 영역에 맞는 영유아 놀이 활동 아이디어를 찾아보세요."
+    />
+    <meta name="theme-color" content="#fffdf8" />
+    <title>놀이 활동 | 아이누리 배움터</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문 바로가기</a>
+
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="index.html" aria-label="아이누리 배움터 홈">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 18.5V10m0 2.5c-2.8 0-5-1.9-5-4.7 2.8 0 5 1.9 5 4.7Zm0-2.2c2.8 0 5-1.8 5-4.8-2.8 0-5 1.9-5 4.8Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M7.5 18.5h9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+            </svg>
+          </span>
+          <span>아이누리 배움터</span>
+        </a>
+
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="메뉴 열기">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav id="site-navigation" class="site-nav" aria-label="주요 메뉴">
+          <a href="curriculum.html">교육과정</a>
+          <a class="current" href="activities.html" aria-current="page">놀이 활동</a>
+          <a href="index.html#resources">자료 안내</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="activity-page-hero">
+        <div class="shell activity-hero-grid">
+          <div>
+            <p class="breadcrumb"><a href="index.html">홈</a><span>/</span>놀이 활동</p>
+            <p class="eyebrow"><span></span> 오늘은 무엇을 해볼까요?</p>
+            <h1>아이의 관심을 담은<br /><strong>15가지 놀이</strong></h1>
+            <p>연령과 교육 영역을 선택해 지금 필요한 놀이 아이디어를 빠르게 찾아보세요.</p>
+          </div>
+          <div class="activity-stats" aria-label="놀이 자료 구성">
+            <div><strong>3</strong><span>연령 그룹</span></div>
+            <div><strong>5</strong><span>교육 영역</span></div>
+            <div><strong>15</strong><span>놀이 아이디어</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="activity-browser section-soft">
+        <div class="shell">
+          <div class="filter-panel" aria-label="놀이 활동 필터">
+            <div class="filter-intro">
+              <p class="eyebrow">맞춤 놀이 찾기</p>
+              <h2>조건을 선택해 보세요</h2>
+            </div>
+            <div class="filter-controls">
+              <label>
+                <span>연령</span>
+                <select id="age-filter">
+                  <option value="all">모든 연령</option>
+                  <option value="0-1">0~1세</option>
+                  <option value="2">2세</option>
+                  <option value="3-5">3~5세</option>
+                </select>
+              </label>
+              <label>
+                <span>교육 영역</span>
+                <select id="area-filter">
+                  <option value="all">모든 영역</option>
+                  <option value="health">신체운동·건강</option>
+                  <option value="language">의사소통</option>
+                  <option value="social">사회관계</option>
+                  <option value="art">예술경험</option>
+                  <option value="nature">자연탐구</option>
+                </select>
+              </label>
+              <button id="filter-reset" class="filter-reset" type="button">선택 초기화</button>
+            </div>
+          </div>
+
+          <div class="results-heading">
+            <p id="activity-count" aria-live="polite"><strong>15개</strong>의 놀이를 찾았어요</p>
+            <span>각 활동은 아이의 흥미와 발달에 맞게 자유롭게 바꿔 활용하세요.</span>
+          </div>
+
+          <div id="activity-grid" class="activity-grid">
+            <article class="play-card" data-age="0-1" data-area="social">
+              <div class="play-card-top"><span class="age-badge">0~1세</span><span class="area-badge social">사회관계</span></div>
+              <span class="play-icon" aria-hidden="true">🙈</span>
+              <h3>부드러운 천으로 까꿍</h3>
+              <p>천 너머로 얼굴을 숨겼다 나타나며 안정적인 관계와 기대하는 즐거움을 경험해요.</p>
+              <details><summary>놀이 방법 보기</summary><div><strong>준비물</strong><p>비치는 얇고 부드러운 천</p><strong>진행</strong><p>천으로 얼굴을 가린 뒤 영아의 반응을 기다리고 천천히 얼굴을 보여 주세요.</p></div></details>
+            </article>
+
+            <article class="play-card" data-age="0-1" data-area="nature">
+              <div class="play-card-top"><span class="age-badge">0~1세</span><span class="area-badge nature">자연탐구</span></div>
+              <span class="play-icon" aria-hidden="true">🔔</span>
+              <h3>어떤 소리가 날까요?</h3>
+              <p>서로 다른 재료가 담긴 소리 통을 흔들며 소리의 차이를 탐색해요.</p>
+              <details><summary>놀이 방법 보기</summary><div><strong>준비물</strong><p>단단히 밀봉한 투명 통, 쌀·큰 단추 등</p><strong>진행</strong><p>교사가 먼저 천천히 흔들고 영아가 손으로 잡거나 굴려 보도록 기다려 주세요.</p></div></details>
+            </article>
+
+            <article class="play-card" data-age="0-1" data-area="health">
+              <div class="play-card-top"><span class="age-badge">0~1세</span><span class="area-badge health">신체운동·건강</span></div>
+              <span class="play-icon" aria-hidden="true">⚽</span>
+              <h3>말랑 공을 데굴데굴</h3>
+              <p>공을 밀고 따라가며 눈과 손을 함께 사용하고 몸의 움직임을 즐겨요.</p>
+              <details><summary>놀이 방법 보기</summary><div><strong>준비물</strong><p>크고 부드러운 공</p><strong>진행</strong><p>가까운 거리에서 공을 굴리고 영아가 시선이나 몸으로 따라가도록 격려해 주세요.</p></div></details>
+            </article>
+
+            <article class="play-card" data-age="0-1" data-area="art">
+              <div class="play-card-top"><span class="age-badge">0~1세</span><span class="area-badge art">예술경험</span></div>
+              <span class="play-icon" aria-hidden="true">🎨</span>
+              <h3>손가락으로 색을 만나요</h3>
+              <p>안전한 물감의 질감과 색 변화를 손가락과 손바닥으로 느껴 봐요.</p>
+              <details><summary>놀이 방법 보기</summary><div><strong>준비물</strong><p>무독성 물감, 큰 종이, 방수 매트</p><strong>진행</strong><p>소량의 물감을 놓고 자유롭게 누르고 문지를 수 있도록 옆에서 지켜봐 주세요.</p></div></details>
+            </article>
+
+            <article class="play-card" data-age="0-1" data-area="language">
+              <div class="play-card-top"><span class="age-badge">0~1세</span><span class="area-badge language">의사소통</span></div>
+              <span class="play-icon" aria-hidden="true">📖</span>
+              <h3>그림책 속 소리 찾기</h3>
+              <p>그림을 함께 바라보며 동물과 사물의 소리를 듣고 자유롭게 따라 해요.</p>
+              <details><summary>놀이 방법 보기</summary><div><strong>준비물</strong><p>그림이 크고 선명한 보드북</p><strong>진행</strong><p>영아가 바라보는 그림을 짚어 이름과 소리를 천천히 들려주세요.</p></div></details>
+            </article>
+
+            <article class="play-card" data-age="2" data-area="health">
+              <div class="play-card-top"><span class="age-badge">2세</span><span class="area-badge health">신체운동·건강</span></div>
+              <span class="play-icon" aria-hidden="true">👣</span>
+              <h3>색깔 길을 따라 걸어요</h3>
+              <p>바닥의 색깔 길을 따라 걷고 멈추며 몸의 균형과 움직임을 조절해요.</p>
+              <details><summary>놀이 방법 보기</summary><div><strong>준비물</strong><p>색 테이프 또는 미끄럼 방지 발판</p><strong>진행</strong><p>직선과 곡선 길을 만들고 원하는 길을 선택해 이동하도록 해 주세요.</p></div></details>
+            </article>
+
+            <article class="play-card" data-age="2" data-area="social">
+              <div class="play-card-top"><span class="age-badge">2세</span><span class="area-badge social">사회관계</span></div>
+              <span class="play-icon" aria-hidden="true">🧱</span>
+              <h3>친구와 블록 길 만들기</h3>
+              <p>친구와 같은 공간에서 블록을 놓고 길을 연결하며 함께 놀이해요.</p>
+              <details><summary>놀이 방법 보기</summary><div><strong>준비물</strong><p>크기가 큰 블록, 자동차</p><strong>진행</strong><p>각자 만든 길이 만날 수 있도록 충분한 공간과 블록을 제공해 주세요.</p></div></details>
+            </article>
+
+            <article class="play-card" data-age="2" data-area="art">
+              <div class="play-card-top"><span class="age-badge">2세</span><span class="area-badge art">예술경험</span></div>
+              <span class="play-icon" aria-hidden="true">🥁</span>
+              <h3>자연물 소리 연주회</h3>
+              <p>나뭇가지와 돌, 열매가 내는 소리를 듣고 리듬을 자유롭게 표현해요.</p>
+              <details><summary>놀이 방법 보기</summary><div><strong>준비물</strong><p>안전하게 세척한 큰 자연물, 바구니</p><strong>진행</strong><p>두드리고 비비는 다양한 방법을 보여준 뒤 영아의 표현을 따라 해 보세요.</p></div></details>
+            </article>
+
+            <article class="play-card" data-age="2" data-area="language">
+              <div class="play-card-top"><span class="age-badge">2세</span><span class="area-badge language">의사소통</span></div>
+              <span class="play-icon" aria-hidden="true">🖼️</span>
+              <h3>사진 보고 이야기해요</h3>
+              <p>익숙한 일상 사진을 보며 사람과 장소, 있었던 일을 짧은 말로 표현해요.</p>
+              <details><summary>놀이 방법 보기</summary><div><strong>준비물</strong><p>가족·교실·놀이 사진</p><strong>진행</strong><p>“누구일까?”, “무엇을 했을까?”처럼 답이 열려 있는 질문을 건네요.</p></div></details>
+            </article>
+
+            <article class="play-card" data-age="2" data-area="nature">
+              <div class="play-card-top"><span class="age-badge">2세</span><span class="area-badge nature">자연탐구</span></div>
+              <span class="play-icon" aria-hidden="true">💧</span>
+              <h3>물에 뜰까, 가라앉을까?</h3>
+              <p>안전한 생활 물건을 물에 넣어 보며 서로 다른 결과를 반복해서 관찰해요.</p>
+              <details><summary>놀이 방법 보기</summary><div><strong>준비물</strong><p>얕은 물통, 큰 블록·숟가락·스펀지</p><strong>진행</strong><p>영아가 물건을 고르고 넣도록 하며 결과를 말로 표현해 주세요.</p></div></details>
+            </article>
+
+            <article class="play-card" data-age="3-5" data-area="health">
+              <div class="play-card-top"><span class="age-badge">3~5세</span><span class="area-badge health">신체운동·건강</span></div>
+              <span class="play-icon" aria-hidden="true">🌦️</span>
+              <h3>몸으로 날씨를 표현해요</h3>
+              <p>바람, 비, 햇살의 모습을 떠올리고 큰 움직임과 작은 움직임으로 표현해요.</p>
+              <details><summary>놀이 방법 보기</summary><div><strong>준비물</strong><p>날씨 사진, 다양한 빠르기의 음악</p><strong>진행</strong><p>유아가 고른 날씨를 몸으로 표현하면 친구들이 맞혀 보도록 해요.</p></div></details>
+            </article>
+
+            <article class="play-card" data-age="3-5" data-area="language">
+              <div class="play-card-top"><span class="age-badge">3~5세</span><span class="area-badge language">의사소통</span></div>
+              <span class="play-icon" aria-hidden="true">💭</span>
+              <h3>상상 이야기 이어 짓기</h3>
+              <p>한 문장씩 이야기를 이어 가며 다른 사람의 말을 듣고 생각을 표현해요.</p>
+              <details><summary>놀이 방법 보기</summary><div><strong>준비물</strong><p>인물·장소·물건 그림 카드</p><strong>진행</strong><p>카드 한 장으로 이야기를 시작하고 차례대로 다음 장면을 덧붙여요.</p></div></details>
+            </article>
+
+            <article class="play-card" data-age="3-5" data-area="social">
+              <div class="play-card-top"><span class="age-badge">3~5세</span><span class="area-badge social">사회관계</span></div>
+              <span class="play-icon" aria-hidden="true">🏘️</span>
+              <h3>우리 동네 역할놀이</h3>
+              <p>동네에서 만나는 사람과 장소를 떠올리고 역할을 정해 함께 놀이해요.</p>
+              <details><summary>놀이 방법 보기</summary><div><strong>준비물</strong><p>상자, 종이, 역할 소품</p><strong>진행</strong><p>유아들이 필요한 장소와 역할을 의논하고 직접 소품을 만들도록 지원해요.</p></div></details>
+            </article>
+
+            <article class="play-card" data-age="3-5" data-area="art">
+              <div class="play-card-top"><span class="age-badge">3~5세</span><span class="area-badge art">예술경험</span></div>
+              <span class="play-icon" aria-hidden="true">🍂</span>
+              <h3>자연물 콜라주</h3>
+              <p>나뭇잎과 작은 가지의 색과 모양을 살펴보고 새로운 작품으로 구성해요.</p>
+              <details><summary>놀이 방법 보기</summary><div><strong>준비물</strong><p>자연물, 두꺼운 종이, 풀</p><strong>진행</strong><p>완성 모양을 정해 주지 않고 재료의 특징을 살려 자유롭게 구성하게 해요.</p></div></details>
+            </article>
+
+            <article class="play-card" data-age="3-5" data-area="nature">
+              <div class="play-card-top"><span class="age-badge">3~5세</span><span class="area-badge nature">자연탐구</span></div>
+              <span class="play-icon" aria-hidden="true">🌱</span>
+              <h3>씨앗 관찰 기록</h3>
+              <p>씨앗이 싹트고 자라는 변화를 여러 날 관찰하며 그림과 말로 기록해요.</p>
+              <details><summary>놀이 방법 보기</summary><div><strong>준비물</strong><p>빠르게 싹트는 씨앗, 투명 용기, 기록지</p><strong>진행</strong><p>매일 같은 시간에 관찰하고 달라진 점과 궁금한 점을 함께 나눠요.</p></div></details>
+            </article>
+          </div>
+
+          <div id="empty-state" class="empty-state" hidden>
+            <span aria-hidden="true">🌿</span>
+            <h3>조건에 맞는 놀이가 아직 없어요</h3>
+            <p>다른 연령이나 교육 영역을 선택해 보세요.</p>
+            <button type="button" class="button button-secondary">필터 초기화</button>
+          </div>
+
+          <div class="activity-note">
+            <strong>활용 전에 확인해 주세요</strong>
+            <p>위 활동은 교육과정 이해를 돕기 위한 자체 제작 예시입니다. 아이의 발달과 관심, 기관 환경을 고려해 재료와 방법을 조정하고 활동 중에는 항상 안전을 살펴주세요.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <a class="brand" href="index.html" aria-label="아이누리 배움터 홈">
+          <span class="brand-mark" aria-hidden="true">🌱</span>
+          <span>아이누리 배움터</span>
+        </a>
+        <p>© <span id="current-year"></span> 아이누리 배움터 · 아이의 놀이와 배움을 함께 바라봅니다.</p>
+      </div>
+    </footer>
+  </body>
+</html>

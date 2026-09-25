@@ -91,3 +91,48 @@ areaTabs.forEach((tab) => {
 
 const year = document.querySelector("#current-year");
 if (year) year.textContent = String(new Date().getFullYear());
+
+const ageFilter = document.querySelector("#age-filter");
+const activityAreaFilter = document.querySelector("#area-filter");
+const filterReset = document.querySelector("#filter-reset");
+const activityCount = document.querySelector("#activity-count");
+const emptyState = document.querySelector("#empty-state");
+const emptyReset = emptyState?.querySelector("button");
+const playCards = [...document.querySelectorAll(".play-card")];
+
+function applyActivityFilters() {
+  if (!ageFilter || !activityAreaFilter || playCards.length === 0) return;
+
+  const selectedAge = ageFilter.value;
+  const selectedArea = activityAreaFilter.value;
+  let visibleCount = 0;
+
+  playCards.forEach((card) => {
+    const matchesAge = selectedAge === "all" || card.dataset.age === selectedAge;
+    const matchesArea =
+      selectedArea === "all" || card.dataset.area === selectedArea;
+    const isVisible = matchesAge && matchesArea;
+
+    card.classList.toggle("filtered-out", !isVisible);
+    card.setAttribute("aria-hidden", String(!isVisible));
+    if (isVisible) visibleCount += 1;
+  });
+
+  if (activityCount) {
+    activityCount.innerHTML = `<strong>${visibleCount}개</strong>의 놀이를 찾았어요`;
+  }
+  if (emptyState) emptyState.hidden = visibleCount !== 0;
+}
+
+function resetActivityFilters() {
+  if (!ageFilter || !activityAreaFilter) return;
+  ageFilter.value = "all";
+  activityAreaFilter.value = "all";
+  applyActivityFilters();
+  ageFilter.focus();
+}
+
+ageFilter?.addEventListener("change", applyActivityFilters);
+activityAreaFilter?.addEventListener("change", applyActivityFilters);
+filterReset?.addEventListener("click", resetActivityFilters);
+emptyReset?.addEventListener("click", resetActivityFilters);
