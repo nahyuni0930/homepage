@@ -580,6 +580,48 @@ a {
   padding-top: 2rem;
 }
 
+.final-video-section {
+  border-top: 1px solid var(--line);
+  background: #f1f7f3;
+}
+
+.final-video-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.final-video-heading h2 {
+  margin: 0.55rem 0 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+  letter-spacing: -0.05em;
+}
+
+.final-video-heading p:last-child {
+  margin: 0.9rem 0 0;
+  color: var(--muted);
+}
+
+.video-frame {
+  margin-top: 2rem;
+  padding: 0.7rem;
+  border-radius: 2rem;
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.video-frame video {
+  display: block;
+  width: 100%;
+  max-height: 72vh;
+  aspect-ratio: 16 / 9;
+  border-radius: 1.4rem;
+  background: #16201c;
+  object-fit: contain;
+}
+
 .resource-card {
   display: grid;
   grid-template-columns: 1.25fr 0.75fr;
@@ -1952,6 +1994,11 @@ a {
     align-items: flex-start;
     flex-direction: column;
     gap: 0.3rem;
+  }
+
+  .final-video-heading {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .resource-hero-grid,
