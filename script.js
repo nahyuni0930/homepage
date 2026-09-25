@@ -27,6 +27,10 @@ window.addEventListener("resize", () => {
   if (window.innerWidth > 820) closeMenu();
 });
 
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeMenu();
+});
+
 const areaData = {
   health: {
     icon: "🏃",
@@ -79,7 +83,7 @@ areaTabs.forEach((tab) => {
     areaTabs.forEach((item) => {
       const isActive = item === tab;
       item.classList.toggle("active", isActive);
-      item.setAttribute("aria-selected", String(isActive));
+      item.setAttribute("aria-pressed", String(isActive));
     });
 
     if (areaIcon) areaIcon.textContent = selected.icon;
@@ -170,4 +174,26 @@ resourceFilterButtons.forEach((button) => {
 
 document.querySelector("#print-resources")?.addEventListener("click", () => {
   window.print();
+});
+
+let printDetailStates = [];
+
+window.addEventListener("beforeprint", () => {
+  const printableDetails = [
+    ...document.querySelectorAll(".resource-item:not(.filtered-out) details"),
+  ];
+  printDetailStates = printableDetails.map((detail) => detail.open);
+  printableDetails.forEach((detail) => {
+    detail.open = true;
+  });
+});
+
+window.addEventListener("afterprint", () => {
+  const printableDetails = [
+    ...document.querySelectorAll(".resource-item:not(.filtered-out) details"),
+  ];
+  printableDetails.forEach((detail, index) => {
+    detail.open = printDetailStates[index] ?? false;
+  });
+  printDetailStates = [];
 });

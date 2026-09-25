@@ -8,7 +8,15 @@
       content="누리과정과 표준보육과정을 쉽고 따뜻하게 안내하는 교육 정보 공간입니다."
     />
     <meta name="theme-color" content="#fffdf8" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:site_name" content="아이누리 배움터" />
+    <meta property="og:title" content="아이누리 배움터" />
+    <meta property="og:description" content="누리과정과 표준보육과정을 쉽고 따뜻하게 안내하는 교육 정보 공간입니다." />
     <title>아이누리 배움터</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="site.webmanifest" />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
@@ -155,20 +163,20 @@
               모습을 확인할 수 있어요.
             </p>
 
-            <div class="area-tabs" role="tablist" aria-label="교육 영역 선택">
-              <button class="area-tab active" role="tab" aria-selected="true" data-area="health">
+            <div class="area-tabs" role="group" aria-label="교육 영역 선택">
+              <button class="area-tab active" type="button" aria-pressed="true" data-area="health">
                 신체운동·건강
               </button>
-              <button class="area-tab" role="tab" aria-selected="false" data-area="language">
+              <button class="area-tab" type="button" aria-pressed="false" data-area="language">
                 의사소통
               </button>
-              <button class="area-tab" role="tab" aria-selected="false" data-area="social">
+              <button class="area-tab" type="button" aria-pressed="false" data-area="social">
                 사회관계
               </button>
-              <button class="area-tab" role="tab" aria-selected="false" data-area="art">
+              <button class="area-tab" type="button" aria-pressed="false" data-area="art">
                 예술경험
               </button>
-              <button class="area-tab" role="tab" aria-selected="false" data-area="nature">
+              <button class="area-tab" type="button" aria-pressed="false" data-area="nature">
                 자연탐구
               </button>
             </div>
